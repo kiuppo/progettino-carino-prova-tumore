@@ -2,10 +2,11 @@
 <script lang="ts" >
 import Sidebar from './components/sidebar/Sidebar.vue';
 import {sidebarWidth} from './components/sidebar/state.js';
-import navbar from './components/lista link/navbar.vue';
+
+
 import router from './routes.js';
  export default {
-   components: { Sidebar, navbar },
+   components: { Sidebar },
    setup() {
     return { sidebarWidth }
    }
@@ -17,11 +18,11 @@ import router from './routes.js';
   <div class="absolute h-screen w-screen flex flex-row">
     <Sidebar/>
     <div class="w-full flex flex-col">
-      <navbar :menus="[]"/>
-      <div class="h-screen flex flex-col">
+      
+      <div class=" w-full flex flex-col pt-6 pr-6 pb-6 pl-6">
         <RouterView/>
       </div>
-    </div>
+    </div> 
   </div>
 </template>
 

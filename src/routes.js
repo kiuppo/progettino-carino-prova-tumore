@@ -1,38 +1,23 @@
 
 import Home from './views/home.vue';
-import Informatica from './views/Informatica.vue';
-import Sistemi from './views/Sistemi.vue';
-import Tpsit from './views/Tpsit.vue';
-import Storia from './views/storia.vue';
+
+import Gabibbo from './views/gabibbo.vue'
 import * as informatica from './sotto-routes/Informatica.js'
+import * as Sistemipath from './sotto-routes/Sistemi.js'
 import { createRouter, createWebHistory } from 'vue-router';
 
- const routes = [...informatica.routes,
+ const routes = [...informatica.routes,...Sistemipath.routes,
   {
     path: '/',
     name: 'Home',
     component: Home
   },
+  
   {
-    path: '/sistemi',
-    name: 'sistemi',
-    component: Sistemi
+    path: '/gabibbo',
+    name: 'gabibbo',
+    component: Gabibbo
   },
-  {
-    path: '/storia',
-    name: 'Storia',
-    component: Storia
-  },
-  {
-    path: '/informatica',
-    name: 'informatica',
-    component: Informatica
-  },
-  {
-    path: '/tpsit',
-    name: 'Tpsit',
-    component: Tpsit
-  }
 ]
 
   const router = createRouter({

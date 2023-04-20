@@ -1,6 +1,6 @@
-<script>
+<script setup()>
 import Dropdown from './dropdown.vue';
-
+import { useRoute } from 'vue-router'
 export default {
   name: 'navbar',
   components: {
@@ -9,42 +9,56 @@ export default {
   props: {
     menus: {
       type: Array,
-      required: true
-    }
+      required: false
+    },
+    setup() {
+    return {};
+  },
   },
   data () {
     return {
-      services: [
+      contatti: [
         {
-          title: 'Web',
-          link: '/storia'
+          title: 'Camilla C.',
+          link: 'https://www.instagram.com/ca_milla0908/'
         },
         {
-          title: 'Design',
-          link:'/Tpsit'
+          title: 'Alessandro V.',
+          link:'https://www.instagram.com/thegreen2110/'
         },
         {
-          title: 'Videos',
-          link: '/Informatica'
+          title: 'Alessandro C.',
+          link: 'https://www.instagram.com/alessandro_comastri_/'
+        },
+        {
+          title: 'Stefan B.',
+          link: 'https://www.instagram.com/_stefan_k____/'
         }
       ]
     }
   }
 }
+
 </script>
 
 <template>
-  <nav class="flex items-center justify-center gap-8 h-24 w-full bg-indigo-700">
-    <div class="menu-item">
-      <a href="/storia">Home</a>
+  <nav class="bg-indigo-700">
+    <div class="h-24 flex items-center justify-center gap-8 w-full" >
+    <div >
+      <font-awesome-icon :icon="['fab', 'instagram']" style="color: #f2f2f2;" />
     </div>
     <div class="menu-item">
-      <a href="/Tpsit">About</a>
+      <router-link to="/gabibbo">
+        istruzioni
+        </router-link>
     </div>
-    <Dropdown title="Services" :items="services" />
+    <Dropdown title="contatti" :items="contatti" />
     <div class="menu-item">
       <a href="/Informatica">Contact</a>
     </div>
+    <div>
+    </div>
+  </div>
   </nav>
 </template>
 
