@@ -34,6 +34,20 @@ export default {
           title: 'Stefan B.',
           link: 'https://www.instagram.com/_stefan_k____/'
         }
+      ],
+      Ringraziamenti: [
+        {
+          title: 'Vuetify',
+          link: 'https://vuetifyjs.com/en/introduction/why-vuetify/'
+        },
+        {
+          title: 'vueExamples',
+          link:'https://vuejsexamples.com/'
+        },
+        {
+          title: 'w3school',
+          link: 'https://www.w3schools.com/'
+        }
       ]
     }
   }
@@ -53,10 +67,8 @@ export default {
         </router-link>
     </div>
     <Dropdown title="contatti" :items="contatti" />
-    <div class="menu-item">
-      <a href="/Informatica">Contact</a>
-    </div>
     <div>
+      <Dropdown title="ringraziamenti" :items="Ringraziamenti" />
     </div>
   </div>
   </nav>

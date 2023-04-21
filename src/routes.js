@@ -3,11 +3,12 @@ import Home from './views/home.vue';
 
 import Gabibbo from './views/gabibbo.vue'
 import * as informatica from './sotto-routes/Informatica.js'
-import * as Sistemipath from './sotto-routes/Sistemi.js'
+import * as Storiapath from './sotto-routes/Storia.js'
+ import * as Inglesepath from './sotto-routes/Inglese.js'
 import { createRouter, createWebHistory } from 'vue-router';
 
- const routes = [...informatica.routes,...Sistemipath.routes,
-  {
+ const routes = [...informatica.routes,...Storiapath.routes,...Inglesepath.routes, 
+ {
     path: '/',
     name: 'Home',
     component: Home

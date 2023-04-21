@@ -20,26 +20,40 @@ export default {
     return {
       Informatica: [
         {
-          title: 'C++',
-          link: '/c++'
+          title: 'Java1',
+          link: '/java'
         },
         {
-          title: 'Java',
-          link: '/java'
+          title: 'Java2',
+          link: '/java2'
+        },
+        {
+          title: 'esinfo',
+          link: '/esinfo'
         }
       ],
       Storia: [
         {
-          title: 'Rivoluzione Francese',
-          link: '/storia'
+          title: 'Guerra 30 anni',
+          link: '/Trentanni'
         },
         {
-          title: 'Rivoluzione Americana',
-          link:'/Tpsit'
+          title: 'esercizi',
+          link:'/esstoria'
+        },
+      ],
+      inglese: [
+        {
+          title: 'ing1',
+          link: '/inglese'
         },
         {
-          title: 'Rinascimento',
-          link: '/Informatica'
+          title: 'something',
+          link:'/inglese2'
+        },
+        {
+          title: 'esing',
+          link: '/esing'
         }
       ]
     }
@@ -62,12 +76,7 @@ export default {
     <SidebarLink to="/" icon="fas fa-home">Home</SidebarLink>
     <Dropdown class="menu-item" title="Informatica" :items="Informatica" />
     <Dropdown class="menu-item" title="Storia" :items="Storia" />
-    <dropdown class="menu item" title="tpsit" :items="tpsit"/>
-    <Dropdown class="menu-item" title="sistemi" :items="sistemi" />
     <Dropdown class="menu-item" title="inglese" :items="inglese" />
-    <Dropdown class="menu-item" title="matematica" :items="matematica" />
-    <Dropdown class="menu-item" title="telecomunicazioni" :items="telecomunicazioni" />
-    <Dropdown class="menu-item" title="Italiano" :items="italiano" />
     <!-- <SidebarLink to="/storia" icon="fas fa-chart-bar">Storia</SidebarLink>
     <SidebarLink to="/tpsit" icon="fas fa-users">Tpsit</SidebarLink>
     <SidebarLink to="/sistemi" icon="fas fa-image">Sistemi</SidebarLink>  

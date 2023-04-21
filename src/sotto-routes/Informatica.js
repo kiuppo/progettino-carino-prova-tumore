@@ -1,16 +1,22 @@
 import Java from '../views/Info/java.vue';
-import cplus from '../views/Info/c++.vue';
+import javatwo from '../views/Info/java2.vue';
+import Esinfo from '../views/Info/esinfo.vue';
 export const routes = [
     {
-        path: '/java',
+        path: '/java2',
         name: 'Java errori',
-        component: Java
+        component: javatwo
     },
     {
-        path: '/c++',
-        name: 'c++',
-        component: cplus
+        path: '/java',
+        name: 'Java',
+        component: Java
 
-    }
+    },
+    {
+        path: '/esinfo',
+        name: 'Esinfo',
+        component: Esinfo
+    },
 ]
 

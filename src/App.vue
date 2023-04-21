@@ -1,4 +1,3 @@
-
 <script lang="ts" >
 import Sidebar from './components/sidebar/Sidebar.vue';
 import {sidebarWidth} from './components/sidebar/state.js';
